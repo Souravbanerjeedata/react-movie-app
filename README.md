@@ -1,0 +1,6 @@
+please add .esv.local file in the root folder.
+
+the property of the file is as follows:
+
+
+VITE_TMDB_API_KEY=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNTk0MzYyNjQzYjFhN2JiOThhM2JhODBkNzM3Y2YxZSIsIm5iZiI6MTc2MTc0NzY1Mi4wNDMsInN1YiI6IjY5MDIyMmM0NWMwMzQzNjc4N2M0NjIzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.34TrQx3aQ5chbUtrIESkBpuPM6BX1bJZpb6D6atVXbQ
