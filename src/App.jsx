@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useDebounce } from "react-use";
 import heroBanner from "../src/assets/hero.png";
 import Search from "./components/Search";
 import Spinner from "./components/Spinner";
@@ -21,6 +22,15 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [debauncedSearchTerm, setDebauncedSearchTerm] = useState("");
+
+  useDebounce(
+    () => {
+      setDebauncedSearchTerm(searchTerm);
+    },
+    500,
+    [searchTerm]
+  );
 
   const fetchMovies = async (query = "") => {
     setIsLoading(true);
@@ -55,8 +65,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchMovies(searchTerm);
-  }, [searchTerm]);
+    fetchMovies(debauncedSearchTerm);
+  }, [debauncedSearchTerm]);
 
   return (
     <main>
